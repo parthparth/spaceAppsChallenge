@@ -1,8 +1,26 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Muli', sans-serif;
 }
 
-.navbar {
-    padding: 10vw !important;
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+}
+
+@media (min-width: 992px)
+{
+    .navbar-expand-lg .navbar-collapse {
+        width: fit-content !important;
+    }
+}
+
+h1 {
+    font-family: 'Muli', sans-serif;
 }
