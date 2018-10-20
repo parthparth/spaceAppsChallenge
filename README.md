@@ -6,4 +6,4 @@
 
 This app has been built for the [NASA Space App Challenge](https://2018.spaceappchallenge.org) for the `DO YOU KNOW WHEN THE NEXT ROCKET LAUNCH IS?` challenge.
 
-The code is live [here](https://parthparth.github.io/spaceAppsChallenge/] !
+The code is live [here](https://parthparth.github.io/spaceAppsChallenge/) !
