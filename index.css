@@ -79,3 +79,7 @@ nav {
     right: 10px;
     height: calc(100% - 20px);
 }
+
+.card .a-div {
+    display: flex;
+}
