@@ -2,6 +2,7 @@ $(document).ready(function () {
     console.clear();
     getData();
     $('body').scrollView();
+    console.log("Created by Parth Parth @ myselfparth.gq | For the SpaceAppsChallenge 2018");
 });
 
 $.fn.scrollView = function () {
@@ -14,7 +15,6 @@ $.fn.scrollView = function () {
 
 function getData() {
     var url = 'https://launchlibrary.net/1.4/launch/next/' + $("#no-launch").text();
-    console.log(url);
     $.getJSON(url, function (data) {
         $('#lons').html('No of upcoming launches being displayed: ' + data.count);
         data.launches.forEach(element => {
@@ -64,7 +64,6 @@ function getData() {
             card += '</div>';
             document.getElementById('cards').innerHTML += card;
         });
-        console.log(data.launches);
     });
 }
 
