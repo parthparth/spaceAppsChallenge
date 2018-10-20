@@ -20,6 +20,225 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Open+Sans" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="index.css">
+	<style>
+	/* ------------------------CSS for product cards----------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 900px;
+  height: 300px;
+  margin: 30px auto
+  
+}
+
+.card {
+  border-radius: 25px;
+  box-shadow: -21px 11px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card-head {
+  position: relative;
+  height: aoto;
+  background: #fa782e;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #fa782e 8%, #c82930 83%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #fa782e 8%, #c82930 83%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #fa782e 8%, #c82930 83%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fa782e', endColorstr='#c82930', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  border-radius: 25px 25px 0 0;
+}
+
+.card-logo {
+  width: 220px;
+  margin: 5px;
+}
+
+.product-img {
+  position: absolute;
+  left: 0;
+  margin-top: -16px;
+  margin-left: 50px;
+}
+
+.product-detail {
+  padding: 0 20px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.product-summary {
+  padding: 0 20px;
+  margin-top:15px;
+  margin-bottom:10px;
+  font-size: 16px;
+  
+}
+
+.product-detail h2 {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.back-text {
+  display: inline-block;
+  font-size: 70px;
+  font-weight: 900;
+  margin-left: -7px;
+  margin-top:-16px;
+  opacity: 0.2;
+}
+
+.card-body {
+  height: 300px;
+  background: #fff;
+  border-radius: 0 0 25px 25px;
+}
+
+.product-title {
+  padding: 20px 20px 5px 20px;
+  display: block;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.product-title b {
+  font-weight: 900;
+  letter-spacing: 0px;
+}
+
+.badge {
+  position: relative;
+  font-size: 10px;
+  font-weight: 300;
+  color: #fff;
+  background: #11e95b;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -2px;
+  margin-left: 5px;
+}
+
+.product-caption {
+  display: block;
+  padding: 0 20px;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+
+.product-price {
+  background: #11e95b;
+  padding: 7px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 200;
+  color: #fff;
+  border-radius: 7px;
+  margin-top: 13px;
+  margin-bottom:20px;
+  margin-left: -4px;
+  box-shadow: -10px 20px 15px -10px rgba(17, 233, 91, 0.3);
+}
+
+.product-price b {
+  margin-left: 5px;
+}
+table{
+	width:100%;
+	margin-bottom:20px;
+	overflow: auto;
+	 border-collapse: collapse;
+}
+th {
+	width:27%;
+	padding-left:10px;
+	padding-bottom:30px;
+	
+	
+}
+h3{
+  padding: 20px 20px 5px 20px;
+  font-size: 50px;
+  font-weight: 800;
+  font-style:bold;
+  letter-spacing: 1px;
+  margin-left:15%;
+  margin-right:15%;
+  margin-bottom:8px;
+  margin-top:8px;
+}
+h4{
+  padding: 5px 5px 5px 5px;
+  font-size: 50px;
+  font-weight: 800;
+  font-style:bold;
+  letter-spacing: 1px;
+  margin-left:15%;
+  margin-right:15%;
+  margin-bottom:8px;
+  margin-top:8px;
+}
+
+hr {
+  border: 10px solid green;
+  border-radius: 5px;
+}
+
+/* Subscription Form */
+
+/* Full-width input fields */
+input[type=text] {
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for all buttons */
+button1 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+	</style>
 </head>
 <body id="top">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
@@ -50,42 +269,61 @@
         <a href="#information" id="scrollInfo"><i class="fas fa-arrow-down fa-3x"></i></a></div>
         </div>
     </div>
-    <div id="information">
-        <div class="card">
-            <p id="rocket-name"><strong>NAME</strong></p>
-            <p id="rocket-start-window">Start Window</p>
-            <p id="rocket-end-window">End Window</p>
-            
-            
-            <div id="launching-from" class="a-div">
-                <p><strong>Launching From</strong></p>: &nbsp;
-                <a href="" id="rocket-launch">Location</a>&nbsp;|&nbsp;<a href="" id="rocket-map">See it on a map</a>
-            </div>
-            <div id="launch-agencies">
-                <p><strong>Launch Agencies:</strong></p>
-                <p>Name</p>
-                <a href="">link</a>
-            </div>
-            <div id="lsp" class="a-div">
-                <p><strong>Launch Service Provider:</strong></p>&nbsp;<a href="">Agency</a>
-            </div>
-            <div id="mission">
-                <p><strong>Mission information</strong></p>
-                <p>TYPE</p>
-                <a href="">Mission URL</a>
-            </div>
-            <div id="payloads">
-                <p><strong>Payload:</strong></p>
-                <ol id="payload-list">
-
-                </ol>
-            </div>
-            <div class="live">
-                <p><strong>View the live stream here:</strong></p><a href="">hrfd</a>
-            </div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Proton_Zvezda_crop.jpg/300px-Proton_Zvezda_crop.jpg" alt="rocket">
-        </div>
+	
+	
+	<!-------------------------card starts Here ------------>
+	 <div  width="100%">
+  
+                                           <!---------------------------- CARD 1.Android Card Start ---------------------------->
+<th class="th" > <div class="container">
+  <div class="card">
+    <div class="card-head">
+      <img src="https://www.google.co.in/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiCzbeS-5TeAhVGMo8KHRcPC50QjRx6BAgBEAU&url=https%3A%2F%2Fpngtree.com%2Ffreepng%2Frocket-launch_3249348.html&psig=AOvVaw2lfYLomvya-kFO3_Tdjg9A&ust=1540122927954813" alt="logo" class="card-logo" ></img>
+	 
+      <div class="product-detail">
+        <h2 id="rocket-name">Name</h2> 
+      </div>
+      <span class="back-text">
+              Launch
+            </span>
     </div>
-    <script src="./index.js"></script>
+    <div class="card-body">
+      <div class="product-desc">
+        <span class="product-title" id="rocket-start-window">
+                <b >Start Window</b>
+		 <span class="product-title" id="rocket-end-window">
+                <b>End Window</b>
+                
+				<span class="badge">
+                  Live Stream
+                </span>
+				
+        </span>
+        <span class="product-caption">
+                Explore the depth 
+              </span>
+        
+      </div>
+	  <div class="product-summary">
+	  <p>Launching From</p>
+	  <p> other Required Info<p>
+      </div>
+	  <div class="product-properties">
+
+        <a target="_blank" href="#"><span class="product-price">
+                Watch Live<b>Now</b>
+              </span></a>
+      </div>
+    </div>
+  </div>
+</div></th>
+  <script src="./index.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
