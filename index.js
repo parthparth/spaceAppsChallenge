@@ -69,7 +69,10 @@ function getData() {
 
 $('#increase').on('click', function () {
     var num = $("#no-launch").text();
-    num++;
+    if (num < 14)
+        num++;
+    else
+        return false;
     $("#no-launch").html(num);
 });
 
@@ -85,3 +88,7 @@ $('#decrease').on('click', function () {
 $('#go').on('click', function () {
     getData();
 });
+
+$('#scrollInfo').on('click', function() {
+    ('#information').scrollView;
+})

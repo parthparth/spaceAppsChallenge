@@ -129,3 +129,13 @@ ul {
 .description-p {
     max-width: 40% !important;
 }
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    border-top: 3px solid rgba(0,0,0,0.7);
+    box-sizing: initial;
+}
