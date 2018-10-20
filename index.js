@@ -30,16 +30,37 @@ function getData() {
             card += '<p><strong>Launch Details</strong></p>';
             if (element.missions[0].agencies != null) {
                 element.missions[0].agencies.forEach(elements => {
-                    card += '<p> Launch Agency: '+ elements.name + '</p>';
+                    card += '<p> Launch Agency: ' + elements.name + '</p>';
+                });
+            }
+            card += '<p class="description-p">'+element.missions[0].description+'</p>';
+            if (element.missions[0].wikiURL)
+                card += '<a href=' + element.missions[0].wikiURL + '">More information</a>';
+            card += '</div>';
+            card += '<div id="lsp" class="a-div">';
+            card += '<p class="description-p"><strong>Launch Service Provider:</strong></p>&nbsp;<a class="description-p" href="' + element.lsp.wikiURL + '">' + element.lsp.name + '</a>';
+            card += '</div>';
+            if (element.missions[0].payloads) {
+                element.missions[0].payloads.forEach(elements => {
+                    card += '<div id="payloads">';
+                    card += '<p><strong>Payload:</strong></p>';
+                    card += '<ul id="payload-list">';
+                    card += '<li>' + elements.name + '</li>';
+                    card += '</ul>';
+                    card += '</div>';
+                });
+            }
+            if (element.vidURLs.length != 0) {
+                var i = 0;
+                card += '<div class="live">';
+                card += '<p><strong>Live Stream URLs:</strong></p>';
+                element.vidURLs.forEach(elements => {
+                    i++;
+                    card += '<a href="' + elements + '">Live stream URL '+i+'</a>';
                 });
                 card += '</div>';
             }
-            card += element.missions[0].description;
-            if (element.missions[0].wikiURL)
-                card += '<a href=' + element.missions[0].wikiURL + '">More information</a>';
-            card += '<div id="lsp" class="a-div">';
-            card += '<p><strong>Launch Service Provider:</strong></p>&nbsp;<a href="'+element.lsp.wikiURL+'">'+element.lsp.name+'</a>';
-            card += '</div>';
+            card += '<img alt="Rocket" src="'+element.rocket.imageURL+'">';
             card += '</div>';
             document.getElementById('cards').innerHTML += card;
         });
