@@ -8,4 +8,4 @@ This app has been built for the [NASA Space App Challenge](https://2018.spaceapp
 
 The code is live [here](https://parthparth.github.io/spaceAppsChallenge/) !
 
-This project is no longer being actively maintained
+This project is no longer being actively maintained. I have no idea if it works anymore, so please feel free to submit PRs to improve
